@@ -18,5 +18,13 @@ if __name__ == "__main__":
     elif len(sys.argv) > 2:
         print("I can only interpreter one file one time!")
     else:
-        readFile(sys.argv[1])
-    
+        try: 
+            ext_pos = sys.argv[1].rfind('.')
+            extension = sys.argv[1][ext_pos+1 : ]
+            if extension == 's' or extension == 'asm':
+                readFile(sys.argv[1])
+            else:
+                raise NameError("该程序只能执行.s或.asm文件")
+            
+        except NameError as e:
+            print(e)

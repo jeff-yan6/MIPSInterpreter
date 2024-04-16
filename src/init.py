@@ -2,7 +2,7 @@
 R_start = 0
 I_start = 20
 J_start = 37
-instruction = ["add", "addu", "and", "jr", "nor", "or", "slt", "sltu", "sll", "srl", 
+Instructions = ["add", "addu", "and", "jr", "nor", "or", "slt", "sltu", "sll", "srl", 
                "sub", "subu", "div", "divu", "mfhi", "mflo", "mfc0", "mult", "multu", 
                "sra", "addi", "addiu", "andi", "beq", "bne", "lbu", "lhu", "ll", "lui",
                "lw", "ori", "slti", "sltiu", "sb", "sc", "sh", "sw", "j", "jal"]
@@ -32,9 +32,12 @@ I_type = {
     "opcode": "",
     "rd": "",
     "rt": "",
+    "const": 0
 }
 
 J_type = {
     "opcode": "",
-    "address": 0,
+    "address": "",
 }
+
+label_position = {}
