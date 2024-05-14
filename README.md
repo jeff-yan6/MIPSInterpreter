@@ -1,2 +1,2 @@
 # MIPSInterpreter
-MIPS的解释器
+用rust写的MIPS的解释器
